@@ -1,4 +1,4 @@
 # Quotegenerator
 New Quote Generator
 
-NOTE : Style have done in In-line Styling part 
+NOTE : Style part have done in In-line Styling part 
