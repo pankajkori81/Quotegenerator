@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      
+      .main{
+        width: 850px;
+        height: 450px;
+        background-color: rgb(0, 93, 155);
+        margin-left: 24%;
+        margin-top: 5%;
+        box-shadow: 4px 5px 5px #343434;
+        border-radius: 10px;
+
+      }
+
+      #quote{
+
+        position: absolute;
+        top: 28%;
+        left: 32%;
+        font-size: 25px;
+        color:#fff;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 5%;
+        
+        
+      }
+
+      #author{
+        position: absolute;
+        top: 43%;
+        left: 48%;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      button{
+        position: absolute;
+        bottom: 30%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 850px;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 900;
+         padding: 15px;
+         background-color: teal;
+         color: #fff;
+         border: none;
+         outline: none;
+      }
+
+    </style> 
+
+ 
+</head>
+<body>
+
+    <h1>Quote Generator</h1>
+        
+        <div class="main">
+
+     
+
+        <div id="quote"></div>
+
+        <div id="author"></div>
+
+        <button id="newquote">New Quote</button>
+ 
+    </div>
+       
+      <!-- Javascript part content in index.js  -->
+       <script src="index.js"></script>
+
+       <!-- <script>
+
+        // document.getElementById("quote").innerHTML="hell0";
+        
+        let realData="";
+
+
+        const quote=document.getElementById("quote");
+        const author=document.getElementById("author");
+        
+        const newquote=document.getElementById("newquote");
+
+        const getNewData= () =>{
+            let randomnum= Math.floor(Math.random()*20);
+           
+
+            quote.innerText=`${realData[randomnum].text}`;
+            author.innerText=`${realData[randomnum].author}`;
+
+
+            console.log(realData[randomnum].text);
+            console.log(realData[randomnum].author);
+        }
+
+        const getQuotes= async() =>{
+
+            const api="https://type.fit/api/quotes";
+            
+
+            try { 
+
+                let data =await fetch(api);
+
+               realData=await data.json()
+
+                // console.log(realData[12].text);
+                // console.log(realData[12].author);
+
+                getNewData();
+
+            }catch(error){
+
+            }
+            
+        };
+
+        newquote.addEventListener("click" , getNewData);
+        getQuotes();
+       </script> -->
+</body>
+</html>
